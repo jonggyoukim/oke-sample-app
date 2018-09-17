@@ -8,7 +8,7 @@ module.exports = {
                 res.redirect('/');
             }
             res.render('index.ejs', {
-                title: "Welcome to OKE Sample | View Players"
+                title: "OKE 연락처 샘플입니다. | 연락처 보기"
                 ,players: result
             });
         });

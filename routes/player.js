@@ -3,7 +3,7 @@ const fs = require('fs');
 module.exports = {
     addPlayerPage: (req, res) => {
         res.render('add-player.ejs', {
-            title: "Welcome to Socka | Add a new player"
+            title: "OKE 연락처 샘플입니다. | 새로운 연락처 등록"
             ,message: ''
         });
     },
@@ -25,7 +25,7 @@ module.exports = {
                 message = 'Username already exists';
                 res.render('add-player.ejs', {
                     message,
-                    title: "Welcome to OKE Sample | Add a new player"
+                    title: "OKE 연락처 샘플입니다. | 새로운 연락처 등록"
                 });
             } else {
                 // send the player's details to the database
@@ -70,7 +70,6 @@ module.exports = {
     },
     deletePlayer: (req, res) => {
         let playerId = req.params.id;
-        //let getImageQuery = 'SELECT image from `players` WHERE id = "' + playerId + '"';
         let deleteUserQuery = 'DELETE FROM players WHERE id = "' + playerId + '"';
         db.query(deleteUserQuery, (err, result) => {
            if (err) {
