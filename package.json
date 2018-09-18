@@ -4,6 +4,7 @@
   "description": "Node.js on Docker for OKE",
   "author": "JongGyou Kim <jonggyou.kim@oracle.com>",
   "main": "app.js",
+  "private": true,
   "scripts": {
     "start": "node app.js"
   },
