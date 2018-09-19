@@ -9,13 +9,18 @@ const {getHomePage} = require('./routes/index');
 const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
 const port = 8080;
 
+console.log("host:"+ process.env.MYSQL_SERVICE_HOST);
+console.log("user:"+ process.env.MYSQL_SERVICE_USER); 
+console.log("password:"+ process.env.MYSQL_SERVICE_PASSWORD);
+console.log("database:"+ process.env.MYSQL_SERVICE_DATABASE)
+
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
 const db = mysql.createConnection ({
-    host: 'localhost',
-    user: 'test',
-    password: 'Welcome1',
-    database: 'sample'
+    host: process.env.MYSQL_SERVICE_HOST, 
+    user: process.env.MYSQL_SERVICE_USER, 
+    password: process.env.MYSQL_SERVICE_PASSWORD, 
+    database: process.env.MYSQL_SERVICE_DATABASE 
 });
 
 // connect to database
