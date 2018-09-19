@@ -6,8 +6,8 @@ node 와 mysql 을 사용한 게시판입니다.
 
 ## MySQL 설정
 ~~~
-create user 'test' identified WITH mysql_native_password by 'password';
-grant all privileges on *.* to 'test';
+create user 'test'@'%' identified WITH mysql_native_password by 'password';
+grant all privileges on 'test'.* to 'test'@'%';
 CREATE DATABASE sample;
 use sample;
 CREATE TABLE IF NOT EXISTS `players` (

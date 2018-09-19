@@ -1,7 +1,10 @@
-create user 'test' identified WITH mysql_native_password by 'password';
-grant all privileges on *.* to 'test';
+CREATE USER 'test'@'%' IDENTIFIED BY 'Welcome1';
+GRANT ALL PRIVILEGES ON *.* TO 'test'@'%';
+
 CREATE DATABASE sample;
-use sample;
+
+USE sample;
+
 CREATE TABLE IF NOT EXISTS `players` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(255) NOT NULL,
