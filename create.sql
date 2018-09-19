@@ -1,7 +1,7 @@
 CREATE USER 'test'@'%' IDENTIFIED BY 'Welcome1';
 GRANT ALL PRIVILEGES ON *.* TO 'test'@'%';
 
-CREATE DATABASE sample;
+CREATE DATABASE sample DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 USE sample;
 
