@@ -1,4 +1,7 @@
-CREATE USER 'test'@'%' IDENTIFIED BY 'Welcome1';
+CREATE USER 'test'@'%' IDENTIFIED WITH mysql_native_password BY 'Welcome1';
+
+GRANT USAGE ON *.* TO 'test'@'%';
+
 GRANT ALL PRIVILEGES ON *.* TO 'test'@'%';
 
 CREATE DATABASE sample DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
@@ -14,3 +17,4 @@ CREATE TABLE IF NOT EXISTS `players` (
   `user_name` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  AUTO_INCREMENT=1;
+
