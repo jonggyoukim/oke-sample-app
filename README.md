@@ -4,6 +4,8 @@
 
 node 와 mysql 을 사용한 게시판입니다.
 
+[https://github.com/achowba/node-mysql-crud-app](https://github.com/achowba/node-mysql-crud-app)를 수정했습니다.
+
 ## MySQL 설정
 ~~~
 
