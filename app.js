@@ -17,10 +17,10 @@ console.log("database:"+ process.env.MYSQL_SERVICE_DATABASE);
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
 const db = mysql.createConnection ({
-    host: 'localhost',
-    user: 'test',
-    password: 'Welcome1',
-    database: 'sample'
+    host: process.env.MYSQL_SERVICE_HOST || 'localhost',
+    user: process.env.MYSQL_SERVICE_USER || 'test',
+    password: process.env.MYSQL_SERVICE_PASSWORD || 'Welcome1',
+    database: process.env.MYSQL_SERVICE_DATABASE || 'sample'
 });
 
 // connect to database
